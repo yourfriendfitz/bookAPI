@@ -31,6 +31,20 @@ app.post("/books/add", async (req, res, next) => {
   }
 });
 
+app.delete("/books/delete/:id", async (req, res, next) => {
+  const id = req.params.id;
+  const deleteBook = await models.Book.destroy({
+    where: {
+      id
+    }
+  });
+  try {
+    res.json(deleteBook);
+  } catch (error) {
+    res.json(error);
+  }
+});
+
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
