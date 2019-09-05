@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "mhyxppow",
+    "password": "MjG61pIGI8ObMZM9Avsr2QiDJGTIoO1v",
+    "database": "mhyxppow",
+    "host": "echo.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "mhyxppow",
+    "password": "MjG61pIGI8ObMZM9Avsr2QiDJGTIoO1v",
+    "database": "mhyxppow",
+    "host": "echo.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "mhyxppow",
+    "password": "MjG61pIGI8ObMZM9Avsr2QiDJGTIoO1v",
+    "database": "mhyxppow",
+    "host": "echo.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
