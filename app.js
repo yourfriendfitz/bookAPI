@@ -1,8 +1,7 @@
 const express = require("express");
 const models = require("./models");
-const cors = require("cors")
+const cors = require("cors");
 const app = express();
-const port = process.env.PORT | 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -32,4 +31,20 @@ app.post("/books/add", async (req, res, next) => {
   }
 });
 
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+var port = normalizePort(process.env.PORT || "3000");
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
