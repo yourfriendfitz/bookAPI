@@ -1,8 +1,11 @@
 {
-  "name": "bookAPI",
+  "name": "bookapi",
   "version": "1.0.0",
   "description": "API for Books",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "YourFriendFitz",
   "license": "MIT",
   "private": false,
