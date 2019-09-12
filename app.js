@@ -2,6 +2,7 @@ const express = require("express");
 const models = require("./models");
 const cors = require("cors");
 const app = express();
+const randomCoordinates = require("random-coordinates");
 
 app.use(cors());
 app.use(express.json());
@@ -43,6 +44,18 @@ app.post("/books/delete/:id", async (req, res, next) => {
   } catch (error) {
     res.json(error);
   }
+});
+
+// random coordinates generator
+
+app.get("/coordinates", (req, res) => {
+  let coordinatesArray = [];
+  while (coordinatesArray.length !== 5) {
+    const [lat, long] = randomCoordinates().split(",");
+    const coordinate = { lat, long };
+    coordinatesArray = [...coordinatesArray, coordinate];
+  }
+  res.json(coordinatesArray);
 });
 
 function normalizePort(val) {
