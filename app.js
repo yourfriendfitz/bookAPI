@@ -51,7 +51,7 @@ app.post("/books/delete/:id", async (req, res, next) => {
 app.get("/coordinates", (req, res) => {
   let coordinatesArray = [];
   while (coordinatesArray.length !== 5) {
-    const [lat, long] = randomCoordinates().split(",");
+    const [lat, long] = randomCoordinates().split(", ");
     const coordinate = { lat, long };
     coordinatesArray = [...coordinatesArray, coordinate];
   }
